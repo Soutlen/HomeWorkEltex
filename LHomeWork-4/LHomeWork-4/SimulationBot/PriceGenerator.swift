@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol IPriceGenerator {
+protocol PriceGeneratorProtocol {
     func nextPrice() -> Double
 }
 
-struct PriceGenerator: IPriceGenerator {
+struct PriceGenerator: PriceGeneratorProtocol {
     
     let startPrice: Double = 800
     

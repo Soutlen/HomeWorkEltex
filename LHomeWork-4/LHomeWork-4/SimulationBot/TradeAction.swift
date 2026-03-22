@@ -13,11 +13,11 @@ enum TradeAction {
     case hold
 }
 
-protocol ITradeStrategy {
+protocol TradeStrategyProtocol {
     func choiseAction(price: Double, portfoilio: Portfolio, priceGenerator: Double) -> TradeAction
 }
 
-struct TradeStrategy: ITradeStrategy {
+struct TradeStrategy: TradeStrategyProtocol {
     func choiseAction(price: Double, portfoilio: Portfolio, priceGenerator: Double) -> TradeAction {
         if portfoilio.balanceBTC > 0 {
             guard let buyPrice = portfoilio.buyPrice else { return .hold }

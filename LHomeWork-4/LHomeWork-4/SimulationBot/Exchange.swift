@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol IExchange: AnyObject {
+protocol ExchangeProtocol: AnyObject {
     var portfolio: Portfolio { get }
     
     func buyAllUSD(price: Double) -> Bool
     func sellAllBTC(price: Double) -> Bool
 }
 
-final class Exchange: IExchange {
+final class Exchange: ExchangeProtocol {
     private(set) var portfolio: Portfolio
     
     init(portfolio: Portfolio) {
