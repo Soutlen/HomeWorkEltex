@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol IScrollView: AnyObject {
+protocol ScrollViewProtocol: AnyObject {
     func add(_ view: UIView)
 }
 
-final class ScrollView: UIScrollView, IScrollView {
+final class ScrollView: UIScrollView, ScrollViewProtocol {
    
     let content = UIView()
     
@@ -39,7 +39,6 @@ final class ScrollView: UIScrollView, IScrollView {
             content.leadingAnchor.constraint(equalTo: self.contentLayoutGuide.leadingAnchor),
             content.trailingAnchor.constraint(equalTo: self.contentLayoutGuide.trailingAnchor),
             content.bottomAnchor.constraint(equalTo: self.contentLayoutGuide.bottomAnchor),
-            
             content.widthAnchor.constraint(equalTo: self.frameLayoutGuide.widthAnchor)
         ])
     }

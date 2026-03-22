@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol ISalesBot: AnyObject {
-    func runSimulation()
+protocol SalesBotProtocol: AnyObject {
+    func runSimulation() -> [String]
 }
 
-final class SalesBot: ISalesBot {
+final class SalesBot: SalesBotProtocol {
     private let exchange: Exchange
     private let strategy: TradeStrategy
     private let priceGenerator: PriceGenerator
@@ -29,25 +29,40 @@ final class SalesBot: ISalesBot {
         self.iteration = iteration
     }
     
-    func runSimulation() {
+    func runSimulation() -> [String] {
+        
+        var result: [String] = []
+        
         for i in 0..<iteration {
             let price = priceGenerator.nextPrice()
+            let startPrice = priceGenerator.startPrice
             let action = strategy.choiseAction(
                 price: price,
-                portfoilio: exchange.portfolio
+                portfoilio: exchange.portfolio,
+                priceGenerator: startPrice
             )
             
             switch action {
             case .buy:
                 _ = exchange.buyAllUSD(price: price)
-                print("Step \(i+1): BUY at \(String(format: "%.2f", price))")
+                result.append("Step \(i+1): BUY at \(String(format: "%.2f", price))")
             case .sell:
                 _ = exchange.sellAllBTC(price: price)
-                print("Step \(i+1): SELL at \(String(format: "%.2f", price))")
+                result.append("Step \(i+1): SELL at \(String(format: "%.2f", price))")
             case .hold:
-                print("Step \(i+1): HOLD at \(String(format: "%.2f", price))")
+                result.append("Step \(i+1): HOLD at \(String(format: "%.2f", price))")
             }
         }
+        
+        result.append("")
+        result.append("USD: \(String(format: "%.2f", exchange.portfolio.balanceUSD))")
+        result.append("BTC: \(String(format: "%.6f", exchange.portfolio.balanceBTC))")
+        
+        if let buyPrice = exchange.portfolio.buyPrice {
+            result.append("Цена покупки: \(String(format: "%.2f", buyPrice))")
+        }
+        
+        return result
     }
 }
 

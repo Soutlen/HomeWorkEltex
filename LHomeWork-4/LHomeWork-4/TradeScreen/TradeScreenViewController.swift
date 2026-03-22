@@ -7,9 +7,10 @@
 
 import UIKit
 
-final class TradeScreenViewController: UIViewController {
+final class TradeScreenViewController: UIViewController  {
 
-    let contentView = TradeScreenView()
+    private let contentView = TradeScreenView()
+    private let presenter = TradeScreenPresenter()
     
     override func loadView() {
         view = contentView
@@ -17,7 +18,20 @@ final class TradeScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.view = self
+        action()
+    }
     
+    func action() {
+        contentView.onTouchHandler = { [weak self] in
+            self?.presenter.buttonTapped()
+        }
+    }
+}
+
+extension TradeScreenViewController: TradeScreenPresenterProtocol {
+    func showText(_ text: [String]) {
+        contentView.infoLabel.text = text.joined(separator: "\n")
     }
 }
 

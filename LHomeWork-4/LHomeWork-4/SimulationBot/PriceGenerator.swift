@@ -12,7 +12,10 @@ protocol IPriceGenerator {
 }
 
 struct PriceGenerator: IPriceGenerator {
+    
+    let startPrice: Double = 800
+    
     func nextPrice() -> Double {
-        return 800 + Double.random(in: -200...200)
+        return startPrice + Double.random(in: -200...200)
     }
 }

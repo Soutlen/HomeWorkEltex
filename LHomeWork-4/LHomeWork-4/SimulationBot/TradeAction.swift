@@ -14,16 +14,16 @@ enum TradeAction {
 }
 
 protocol ITradeStrategy {
-    func choiseAction(price: Double, portfoilio: Portfolio) -> TradeAction
+    func choiseAction(price: Double, portfoilio: Portfolio, priceGenerator: Double) -> TradeAction
 }
 
 struct TradeStrategy: ITradeStrategy {
-    func choiseAction(price: Double, portfoilio: Portfolio) -> TradeAction {
+    func choiseAction(price: Double, portfoilio: Portfolio, priceGenerator: Double) -> TradeAction {
         if portfoilio.balanceBTC > 0 {
             guard let buyPrice = portfoilio.buyPrice else { return .hold }
             return price >= buyPrice * 1.2 ? .sell : .hold
         } else {
-            return price < 800 ? .buy : .hold
+            return price < priceGenerator ? .buy : .hold
         }
     }
 }

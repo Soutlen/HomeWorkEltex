@@ -8,14 +8,15 @@
 import UIKit
 
 final class TradeScreenView: UIView {
+    private let scrollView = ScrollView()
+    private let titleLabel = UILabel()
+    private let userNameLabel = UILabel()
+    private let imageViewAvatar = UIImageView()
+    private let stackViewHorizontalUser = UIStackView()
+    private let buttomRun = Button()
     
-    let scrollView = ScrollView()
-    let titleLabel = UILabel()
-    let userNameLabel = UILabel()
-    let imageViewAvatar = UIImageView()
-    let stackViewHorizontalUser = UIStackView()
     var infoLabel = UILabel()
-    let buttomRun = Button()
+    var onTouchHandler: (() -> Void)? = nil
     
     init() {
         super.init(frame: .zero)
@@ -34,7 +35,6 @@ final class TradeScreenView: UIView {
         setupImage()
         setupButton()
         setupConstraints()
-        setupTarget()
     }
     
     private func add() {
@@ -55,7 +55,6 @@ final class TradeScreenView: UIView {
         titleLabel.textAlignment = .center
         titleLabel.font = Theme.font.bold(size: 24)
   
-        
         userNameLabel.text = "User Name"
         userNameLabel.textColor = Theme.color.white
         userNameLabel.textAlignment = .center
@@ -84,6 +83,11 @@ final class TradeScreenView: UIView {
     
     private func setupButton() {
         buttomRun.setTitle("Run", for: .normal)
+        buttomRun.addTarget(
+            self,
+            action: #selector(onTouchDown),
+            for: .touchUpInside
+        )
     }
     
     private func setupConstraints() {
@@ -118,49 +122,10 @@ final class TradeScreenView: UIView {
         ])
     }
     
-    private func setupTarget() {
-        print("TapTap")
-        buttomRun.addTarget(
-            self,
-            action: #selector(onTappedButton),
-            for: .touchUpInside
-        )
-    }
-    
     @objc
-    private func onTappedButton() {
+    private func onTouchDown() {
         print("Tap")
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-                self?.runSimulation()
-            }
-    }
-    
-    private func runSimulation() {
-        let portfolio = Portfolio(buyPrice: nil, balanceUSD: 1000, balanceBTC: 0)
-        let exchange = Exchange(portfolio: portfolio)
-        let strategy = TradeStrategy()
-        let priceGenerator = PriceGenerator()
-        
-        let bot = SalesBot(
-            exchange: exchange,
-            strategy: strategy,
-            priceGenerator: priceGenerator,
-            iteration: 10
-        )
-
-        bot.runSimulation()
-        
-        var results: [String] = []
-    
-        results.append("USD: \(String(format: "%.2f", exchange.portfolio.balanceUSD))")
-        results.append("BTC: \(String(format: "%.6f", exchange.portfolio.balanceBTC))")
-        
-        if let buyPrice = exchange.portfolio.buyPrice {
-            results.append("Цена покупки: \(String(format: "%.2f", buyPrice))")
-        }
-        
-        DispatchQueue.main.async { [weak self] in
-            self?.infoLabel.text = results.joined(separator: "\n")
-        }
+        self.onTouchHandler?()
     }
 }
+

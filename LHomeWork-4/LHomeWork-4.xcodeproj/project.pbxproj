@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D17C64C72F6FB5B700ED17C6 /* TradeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C64C62F6FB5B700ED17C6 /* TradeScreenPresenter.swift */; };
 		D1FE1CC92F6E1C290015E4F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE1CC32F6E1C290015E4F7 /* AppDelegate.swift */; };
 		D1FE1CCA2F6E1C290015E4F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE1CC62F6E1C290015E4F7 /* SceneDelegate.swift */; };
 		D1FE1CCC2F6E1C290015E4F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1FE1CC42F6E1C290015E4F7 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D17C64C62F6FB5B700ED17C6 /* TradeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeScreenPresenter.swift; sourceTree = "<group>"; };
 		D1FE1CAB2F6E1BD60015E4F7 /* LHomeWork-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LHomeWork-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1FE1CC32F6E1C290015E4F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1FE1CC42F6E1C290015E4F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,11 +80,11 @@
 		D1FE1CC82F6E1C290015E4F7 /* LHomeWork-4 */ = {
 			isa = PBXGroup;
 			children = (
-				D1FE1CE52F6E1D290015E4F7 /* SimulationBot */,
-				D1FE1CE02F6E1CE80015E4F7 /* TradeScreen */,
-				D1FE1CCE2F6E1C360015E4F7 /* UI */,
 				D1FE1CC32F6E1C290015E4F7 /* AppDelegate.swift */,
 				D1FE1CC62F6E1C290015E4F7 /* SceneDelegate.swift */,
+				D1FE1CCE2F6E1C360015E4F7 /* UI */,
+				D1FE1CE02F6E1CE80015E4F7 /* TradeScreen */,
+				D1FE1CE52F6E1D290015E4F7 /* SimulationBot */,
 				D1FE1CC42F6E1C290015E4F7 /* Assets.xcassets */,
 				D1FE1CC52F6E1C290015E4F7 /* Info.plist */,
 			);
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				D1FE1CE12F6E1CF10015E4F7 /* TradeScreenView.swift */,
+				D17C64C62F6FB5B700ED17C6 /* TradeScreenPresenter.swift */,
 				D1FE1CE32F6E1D0D0015E4F7 /* TradeScreenViewController.swift */,
 			);
 			path = TradeScreen;
@@ -220,6 +223,7 @@
 				D1FE1CCA2F6E1C290015E4F7 /* SceneDelegate.swift in Sources */,
 				D1FE1CF02F6E1D810015E4F7 /* SalesBot.swift in Sources */,
 				D1FE1CEE2F6E1D6E0015E4F7 /* PriceGenerator.swift in Sources */,
+				D17C64C72F6FB5B700ED17C6 /* TradeScreenPresenter.swift in Sources */,
 				D1FE1CEC2F6E1D590015E4F7 /* Exchange.swift in Sources */,
 				D1FE1CDD2F6E1CC20015E4F7 /* ThemeSpacing.swift in Sources */,
 				D1FE1CD92F6E1CA10015E4F7 /* ThemeFont.swift in Sources */,
