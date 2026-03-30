@@ -15,4 +15,5 @@ enum ThemePalette {
     static let green = UIColor.systemGreen
     static let dark = UIColor.systemGray
     static let light = UIColor.lightGray
+    static let yellow = UIColor.systemYellow
 }

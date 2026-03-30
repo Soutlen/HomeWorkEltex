@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol TradeStrategyProtocol {
+protocol TradeStrategyExchangeCurrencyProtocol {
     func choiseAction(price: Double, portfoilio: Portfolio, priceGenerator: Double) -> TradeAction
 }
 
-struct TradeStrategy: TradeStrategyProtocol {
+struct TradeStrategyExchangeCurrency: TradeStrategyExchangeCurrencyProtocol {
     func choiseAction(price: Double, portfoilio: Portfolio, priceGenerator: Double) -> TradeAction {
         if portfoilio.balanceBTC > 0 {
             guard let buyPrice = portfoilio.buyPrice else { return .hold }

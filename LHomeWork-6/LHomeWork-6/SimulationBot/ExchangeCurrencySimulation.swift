@@ -7,19 +7,21 @@
 
 import Foundation
 
-protocol ExchangeProtocol: AnyObject {
+protocol ExchangeCurrencySimulationProtocol: AnyObject {
     var portfolio: Portfolio { get }
     
     func tradeAll(isBuying: Bool, price: Double) -> Bool
 }
 
-final class Exchange: ExchangeProtocol {
+final class ExchangeCurrencySimulation {
     private(set) var portfolio: Portfolio
     
     init(portfolio: Portfolio) {
         self.portfolio = portfolio
     }
-    
+}
+
+extension ExchangeCurrencySimulation: ExchangeCurrencySimulationProtocol {
     func tradeAll(isBuying: Bool, price: Double) -> Bool {
         guard price > 0 else { return false }
     

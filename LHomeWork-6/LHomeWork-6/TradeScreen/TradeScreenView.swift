@@ -7,20 +7,25 @@
 
 import UIKit
 
+protocol TradeScreenViewProtocol: AnyObject {
+    func showSteps(_ steps: [TradeStep])
+    func setSimulationStarted(_ isStarted: Bool)
+}
+
 final class TradeScreenView: UIView {
     private let titleLabel = UILabel()
     private let infoDataLabel = UILabel()
     private let imageViewAvatar = UIImageView()
     private let userNameLabel = UILabel()
     private let stackViewHorizontalUser = UIStackView()
-    private let buttomRun = Button()
-    private var isSimulationStarted = false
+    private let buttomRun = ActionButton()
     private let tableView = UITableView()
+    
     private let dataSource = TradeScreenTableViewDataSource()
-    private let delegate = TradeScreenTableViewDelegate()
 
-    var tradeInfoLabel = UILabel()
-    var onTouchHandler: (() -> Void)? = nil
+    var onRunTap: (() -> Void)? = nil
+    
+    private var isSimulationStarted = false
 
     init() {
         super.init(frame: .zero)
@@ -33,14 +38,20 @@ final class TradeScreenView: UIView {
 
     func updateTableView(with steps: [TradeStep]) {
         dataSource.updateData(steps)
-        tableView.isHidden = false
         tableView.reloadData()
+    }
+    
+    func setSimulationStarted(_ started: Bool) {
+        isSimulationStarted = started
+        infoDataLabel.isHidden = started
+        tableView.isHidden = !started
     }
 }
 
+//MARK: - UI
 private extension TradeScreenView {
     func setupUI() {
-        backgroundColor = Theme.color.orange
+        backgroundColor = Theme.colorDesignSystem.orange
         add()
         setupLabel()
         setupButton()
@@ -52,7 +63,6 @@ private extension TradeScreenView {
 
     func add() {
         self.addSubview(titleLabel)
-        self.addSubview(tradeInfoLabel)
         self.addSubview(infoDataLabel)
         self.addSubview(tableView)
         self.addSubview(stackViewHorizontalUser)
@@ -64,19 +74,19 @@ private extension TradeScreenView {
 
     func setupLabel() {
         titleLabel.text = "Crypto Wallet"
-        titleLabel.textColor = Theme.color.white
+        titleLabel.textColor = Theme.colorDesignSystem.white
         titleLabel.textAlignment = .center
-        titleLabel.font = Theme.font.bold(size: 24)
+        titleLabel.font = Theme.fontDesignSystem.bold(size: 24)
 
         userNameLabel.text = "User Name"
-        userNameLabel.textColor = Theme.color.white
+        userNameLabel.textColor = Theme.colorDesignSystem.white
         userNameLabel.textAlignment = .center
-        userNameLabel.font = Theme.font.regular(size: 24)
+        userNameLabel.font = Theme.fontDesignSystem.regular(size: 24)
 
         infoDataLabel.text = "No Data"
-        infoDataLabel.textColor = Theme.color.white
+        infoDataLabel.textColor = Theme.colorDesignSystem.white
         infoDataLabel.textAlignment = .center
-        infoDataLabel.font = Theme.font.regular(size: 24)
+        infoDataLabel.font = Theme.fontDesignSystem.regular(size: 24)
         infoDataLabel.numberOfLines = 1
         infoDataLabel.isHidden = false
     }
@@ -101,7 +111,7 @@ private extension TradeScreenView {
         imageViewAvatar.image = UIImage(systemName: "person.fill")
         imageViewAvatar.contentMode = .scaleAspectFit
         imageViewAvatar.translatesAutoresizingMaskIntoConstraints = false
-        imageViewAvatar.layer.cornerRadius = Theme.size.CornerRadius.s
+        imageViewAvatar.layer.cornerRadius = Theme.sizeDesignSystem.CornerRadius.small
     }
 
     func setupTableView() {
@@ -115,7 +125,7 @@ private extension TradeScreenView {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 60
         tableView.dataSource = dataSource
-        tableView.delegate = delegate
+        tableView.isHidden = true
     }
 
     func setupConstraints() {
@@ -130,8 +140,9 @@ private extension TradeScreenView {
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
 
-            infoDataLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            infoDataLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            infoDataLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 60),
+            infoDataLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            infoDataLabel.heightAnchor.constraint(equalToConstant: 50),
 
             stackViewHorizontalUser.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
             stackViewHorizontalUser.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
@@ -152,15 +163,6 @@ private extension TradeScreenView {
     @objc
     func onTouchDown() {
         print("Tap")
-        toggleLabels()
-        self.onTouchHandler?()
-    }
-
-    func toggleLabels() {
-        if !isSimulationStarted {
-            isSimulationStarted = true
-            infoDataLabel.isHidden = true
-        }
-        setNeedsLayout()
+        self.onRunTap?()
     }
 }

@@ -8,26 +8,27 @@
 import Foundation
 
 protocol TradeScreenPresenterProtocol: AnyObject {
-    func showStepLog(_ steps: [TradeStep])
+    func didLoad()
+    func didTapRunButton()
 }
 
 final class TradeScreenPresenter {
-    weak var view: TradeScreenPresenterProtocol?
+    weak var view: TradeScreenViewProtocol?
+    private let useCase: TradeSimulationUseCaseProtocol
+    
+    init(useCase: TradeSimulationUseCaseProtocol) {
+        self.useCase = useCase
+    }
+}
 
-    func buttonTapped() {
-        let portfolio = Portfolio(buyPrice: nil, balanceUSD: 1000, balanceBTC: 0)
-        let exchange = Exchange(portfolio: portfolio)
-        let strategy = TradeStrategy()
-        let priceGenerator = PriceGenerator()
-
-        let bot = SalesBot(
-            exchange: exchange,
-            strategy: strategy,
-            priceGenerator: priceGenerator,
-            iteration: 30
-        )
-
-        let steps = bot.runSimulation()
-        view?.showStepLog(steps)
+extension TradeScreenPresenter: TradeScreenPresenterProtocol {
+    func didLoad() {
+        view?.setSimulationStarted(false)
+    }
+    
+    func didTapRunButton() {
+        view?.setSimulationStarted(true)
+        let steps = useCase.execute()
+        view?.showSteps(steps)
     }
 }

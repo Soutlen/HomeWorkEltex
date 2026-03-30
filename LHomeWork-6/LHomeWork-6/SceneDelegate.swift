@@ -18,7 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = TradeScreenViewController()
+        let tradeScreen = TradeScreenAssembly.makeTradeScreen()
+        window.rootViewController = tradeScreen
         window.makeKeyAndVisible()
         self.window = window
     }
@@ -33,4 +34,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func sceneDidEnterBackground(_ scene: UIScene) {}
 }
-

@@ -24,13 +24,7 @@ final class TradeScreenTableViewDataSource: NSObject, UITableViewDataSource {
             withIdentifier: TradeScreenTableViewCell.reuseIdentifier,
             for: indexPath
         ) as! TradeScreenTableViewCell
-
-        let step = steps[indexPath.row]
-
-        cell.configure(
-            primaryText: step.description,
-            action: step.action
-        )
+        cell.configure(step: steps[indexPath.row])
         cell.contentView.backgroundColor = .clear
         return cell
     }

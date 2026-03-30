@@ -7,13 +7,14 @@
 
 import Foundation
 
-protocol PriceGeneratorProtocol {
+protocol PriceGeneratorCurrencyProtocol {
     func nextPrice() -> Double
+    var startPrice: Double { get }
 }
 
-struct PriceGenerator: PriceGeneratorProtocol {
+struct PriceGeneratorCurrency: PriceGeneratorCurrencyProtocol {
     
-    let startPrice: Double = 800
+    var startPrice: Double = 800
     
     func nextPrice() -> Double {
         return startPrice + Double.random(in: -200...200)

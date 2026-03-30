@@ -11,7 +11,7 @@ protocol ScrollViewProtocol: AnyObject {
     func add(_ view: UIView)
 }
 
-final class ScrollView: UIScrollView, ScrollViewProtocol {
+final class ScrollView: UIScrollView {
    
     let content = UIView()
     
@@ -25,11 +25,6 @@ final class ScrollView: UIScrollView, ScrollViewProtocol {
     }
 }
 
-extension ScrollView {
-    func add(_ view: UIView) {
-        content.addSubview(view)
-    }
-}
 
 private extension ScrollView {
     private func setupUI() {
@@ -49,6 +44,12 @@ private extension ScrollView {
             content.bottomAnchor.constraint(equalTo: self.contentLayoutGuide.bottomAnchor),
             content.widthAnchor.constraint(equalTo: self.frameLayoutGuide.widthAnchor)
         ])
+    }
+}
+
+extension ScrollView: ScrollViewProtocol {
+    func add(_ view: UIView) {
+        content.addSubview(view)
     }
 }
 

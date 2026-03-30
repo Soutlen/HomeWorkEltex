@@ -23,16 +23,16 @@ final class TradeScreenTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(primaryText: String, action: TradeAction) {
-        topLabel.text = primaryText
+    func configure(step: TradeStep) {
+        topLabel.text = step.description
 
-        switch action {
+        switch step.action {
         case .buy:
-            topView.backgroundColor = Theme.color.green
+            topView.backgroundColor = Theme.colorDesignSystem.green
         case .sell:
-            topView.backgroundColor = Theme.color.red
+            topView.backgroundColor = Theme.colorDesignSystem.red
         case .hold:
-            topView.backgroundColor = Theme.color.orange
+            topView.backgroundColor = Theme.colorDesignSystem.yellow
         }
     }
 }
@@ -52,8 +52,8 @@ private extension TradeScreenTableViewCell {
     }
 
     func setupLabels() {
-        topLabel.textColor = Theme.color.black
-        topLabel.font = Theme.font.regular(size: 18)
+        topLabel.textColor = Theme.colorDesignSystem.black
+        topLabel.font = Theme.fontDesignSystem.regular(size: 18)
         topLabel.numberOfLines = 0
     }
 

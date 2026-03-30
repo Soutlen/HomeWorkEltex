@@ -7,12 +7,17 @@
 
 import UIKit
 
-final class Button: UIButton {
+final class ActionButton: UIButton {
     
     enum Mode {
         enum Normal {
-            static let backgroundColor = Theme.color.black
-            static let titleColor = Theme.color.white
+            static let backgroundColor = Theme.colorDesignSystem.black
+            static let titleColor = Theme.colorDesignSystem.white
+        }
+        
+        enum Disable {
+            static let background = Theme.colorDesignSystem.red
+            static let titleColor = Theme.colorDesignSystem.white
         }
     }
     
@@ -28,10 +33,10 @@ final class Button: UIButton {
     private func setupUI() {
         backgroundColor = Mode.Normal.backgroundColor
         setTitleColor(Mode.Normal.titleColor, for: .normal)
-        titleLabel?.font = Theme.font.regular(size: 18)
-        titleLabel?.textColor = Theme.color.white
+        titleLabel?.font = Theme.fontDesignSystem.regular(size: 18)
+        titleLabel?.textColor = Theme.colorDesignSystem.white
         titleLabel?.textAlignment = .center
-        layer.cornerRadius = Theme.size.CornerRadius.m
+        layer.cornerRadius = Theme.sizeDesignSystem.CornerRadius.medium
         layer.masksToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
     }

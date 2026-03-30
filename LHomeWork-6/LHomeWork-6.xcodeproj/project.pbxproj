@@ -10,7 +10,7 @@
 		D1E302D62F76ECB000694D91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E302D12F76ECB000694D91 /* Assets.xcassets */; };
 		D1E302D82F76ECB000694D91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E302D02F76ECB000694D91 /* AppDelegate.swift */; };
 		D1E302D92F76ECB000694D91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E302D32F76ECB000694D91 /* SceneDelegate.swift */; };
-		D1E302E92F76ED0E00694D91 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E302E82F76ED0E00694D91 /* Button.swift */; };
+		D1E302E92F76ED0E00694D91 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E302E82F76ED0E00694D91 /* ActionButton.swift */; };
 		D1E302EB2F76ED2D00694D91 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E302EA2F76ED2D00694D91 /* ScrollView.swift */; };
 		D1E302ED2F76ED4400694D91 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E302EC2F76ED4400694D91 /* Theme.swift */; };
 		D1E302EF2F76ED5000694D91 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E302EE2F76ED5000694D91 /* ThemeFont.swift */; };
@@ -20,14 +20,15 @@
 		D1E302F72F76ED8E00694D91 /* TradeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E302F62F76ED8E00694D91 /* TradeScreenPresenter.swift */; };
 		D1E302F92F76ED9D00694D91 /* TradeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E302F82F76ED9D00694D91 /* TradeScreenViewController.swift */; };
 		D1E302FB2F76EDC000694D91 /* TradeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E302FA2F76EDC000694D91 /* TradeScreenView.swift */; };
-		D1E302FD2F76EDD700694D91 /* TradeScreenTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E302FC2F76EDD700694D91 /* TradeScreenTableViewDelegate.swift */; };
 		D1E302FF2F76EDEB00694D91 /* TradeScreenTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E302FE2F76EDEB00694D91 /* TradeScreenTableViewDataSource.swift */; };
 		D1E303012F76EDFC00694D91 /* TradeScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E303002F76EDFC00694D91 /* TradeScreenTableViewCell.swift */; };
 		D1E303032F76EE1000694D91 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E303022F76EE1000694D91 /* Portfolio.swift */; };
-		D1E303052F76EE1D00694D91 /* TradeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E303042F76EE1D00694D91 /* TradeAction.swift */; };
-		D1E303072F76EE2E00694D91 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E303062F76EE2E00694D91 /* Exchange.swift */; };
-		D1E303092F76EE3B00694D91 /* PriceGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E303082F76EE3B00694D91 /* PriceGenerator.swift */; };
-		D1E3030B2F76EE5300694D91 /* SalesBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3030A2F76EE5300694D91 /* SalesBot.swift */; };
+		D1E303052F76EE1D00694D91 /* TradeStrategyExchangeCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E303042F76EE1D00694D91 /* TradeStrategyExchangeCurrency.swift */; };
+		D1E303072F76EE2E00694D91 /* ExchangeCurrencySimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E303062F76EE2E00694D91 /* ExchangeCurrencySimulation.swift */; };
+		D1E303092F76EE3B00694D91 /* PriceGeneratorCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E303082F76EE3B00694D91 /* PriceGeneratorCurrency.swift */; };
+		D1E3030B2F76EE5300694D91 /* TradingСurrencyBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E3030A2F76EE5300694D91 /* TradingСurrencyBot.swift */; };
+		D1E303352F7ACDAC00694D91 /* TradeScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E303342F7ACDAC00694D91 /* TradeScreenAssembly.swift */; };
+		D1E303372F7ACE7A00694D91 /* TradeSimulationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E303362F7ACE7A00694D91 /* TradeSimulationUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +37,7 @@
 		D1E302D12F76ECB000694D91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1E302D22F76ECB000694D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1E302D32F76ECB000694D91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D1E302E82F76ED0E00694D91 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		D1E302E82F76ED0E00694D91 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		D1E302EA2F76ED2D00694D91 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		D1E302EC2F76ED4400694D91 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D1E302EE2F76ED5000694D91 /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
@@ -46,14 +47,15 @@
 		D1E302F62F76ED8E00694D91 /* TradeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeScreenPresenter.swift; sourceTree = "<group>"; };
 		D1E302F82F76ED9D00694D91 /* TradeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeScreenViewController.swift; sourceTree = "<group>"; };
 		D1E302FA2F76EDC000694D91 /* TradeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeScreenView.swift; sourceTree = "<group>"; };
-		D1E302FC2F76EDD700694D91 /* TradeScreenTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeScreenTableViewDelegate.swift; sourceTree = "<group>"; };
 		D1E302FE2F76EDEB00694D91 /* TradeScreenTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeScreenTableViewDataSource.swift; sourceTree = "<group>"; };
 		D1E303002F76EDFC00694D91 /* TradeScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeScreenTableViewCell.swift; sourceTree = "<group>"; };
 		D1E303022F76EE1000694D91 /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
-		D1E303042F76EE1D00694D91 /* TradeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeAction.swift; sourceTree = "<group>"; };
-		D1E303062F76EE2E00694D91 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
-		D1E303082F76EE3B00694D91 /* PriceGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceGenerator.swift; sourceTree = "<group>"; };
-		D1E3030A2F76EE5300694D91 /* SalesBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesBot.swift; sourceTree = "<group>"; };
+		D1E303042F76EE1D00694D91 /* TradeStrategyExchangeCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeStrategyExchangeCurrency.swift; sourceTree = "<group>"; };
+		D1E303062F76EE2E00694D91 /* ExchangeCurrencySimulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCurrencySimulation.swift; sourceTree = "<group>"; };
+		D1E303082F76EE3B00694D91 /* PriceGeneratorCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceGeneratorCurrency.swift; sourceTree = "<group>"; };
+		D1E3030A2F76EE5300694D91 /* TradingСurrencyBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TradingСurrencyBot.swift"; sourceTree = "<group>"; };
+		D1E303342F7ACDAC00694D91 /* TradeScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeScreenAssembly.swift; sourceTree = "<group>"; };
+		D1E303362F7ACE7A00694D91 /* TradeSimulationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeSimulationUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,7 @@
 		D1E302DB2F76ECB700694D91 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				D1E302DD2F76ECC600694D91 /* Theme */,
+				D1E302DD2F76ECC600694D91 /* DesignSystem */,
 				D1E302DC2F76ECBF00694D91 /* Views */,
 			);
 			path = UI;
@@ -109,13 +111,13 @@
 		D1E302DC2F76ECBF00694D91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D1E302E82F76ED0E00694D91 /* Button.swift */,
+				D1E302E82F76ED0E00694D91 /* ActionButton.swift */,
 				D1E302EA2F76ED2D00694D91 /* ScrollView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		D1E302DD2F76ECC600694D91 /* Theme */ = {
+		D1E302DD2F76ECC600694D91 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
 				D1E302EC2F76ED4400694D91 /* Theme.swift */,
@@ -124,7 +126,7 @@
 				D1E302F22F76ED6D00694D91 /* ThemeSpacing.swift */,
 				D1E302F42F76ED7A00694D91 /* ThemePalette.swift */,
 			);
-			path = Theme;
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 		D1E302DE2F76ECD200694D91 /* TradeScreen */ = {
@@ -133,9 +135,9 @@
 				D1E302F62F76ED8E00694D91 /* TradeScreenPresenter.swift */,
 				D1E302F82F76ED9D00694D91 /* TradeScreenViewController.swift */,
 				D1E302FA2F76EDC000694D91 /* TradeScreenView.swift */,
-				D1E302FC2F76EDD700694D91 /* TradeScreenTableViewDelegate.swift */,
 				D1E302FE2F76EDEB00694D91 /* TradeScreenTableViewDataSource.swift */,
 				D1E303002F76EDFC00694D91 /* TradeScreenTableViewCell.swift */,
+				D1E303342F7ACDAC00694D91 /* TradeScreenAssembly.swift */,
 			);
 			path = TradeScreen;
 			sourceTree = "<group>";
@@ -144,10 +146,11 @@
 			isa = PBXGroup;
 			children = (
 				D1E303022F76EE1000694D91 /* Portfolio.swift */,
-				D1E303042F76EE1D00694D91 /* TradeAction.swift */,
-				D1E303062F76EE2E00694D91 /* Exchange.swift */,
-				D1E303082F76EE3B00694D91 /* PriceGenerator.swift */,
-				D1E3030A2F76EE5300694D91 /* SalesBot.swift */,
+				D1E303042F76EE1D00694D91 /* TradeStrategyExchangeCurrency.swift */,
+				D1E303062F76EE2E00694D91 /* ExchangeCurrencySimulation.swift */,
+				D1E303082F76EE3B00694D91 /* PriceGeneratorCurrency.swift */,
+				D1E3030A2F76EE5300694D91 /* TradingСurrencyBot.swift */,
+				D1E303362F7ACE7A00694D91 /* TradeSimulationUseCase.swift */,
 			);
 			path = SimulationBot;
 			sourceTree = "<group>";
@@ -225,25 +228,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1E302F12F76ED5F00694D91 /* ThemeSize.swift in Sources */,
-				D1E303092F76EE3B00694D91 /* PriceGenerator.swift in Sources */,
+				D1E303092F76EE3B00694D91 /* PriceGeneratorCurrency.swift in Sources */,
 				D1E302F92F76ED9D00694D91 /* TradeScreenViewController.swift in Sources */,
 				D1E302F52F76ED7A00694D91 /* ThemePalette.swift in Sources */,
-				D1E303072F76EE2E00694D91 /* Exchange.swift in Sources */,
+				D1E303072F76EE2E00694D91 /* ExchangeCurrencySimulation.swift in Sources */,
 				D1E302FB2F76EDC000694D91 /* TradeScreenView.swift in Sources */,
 				D1E302F72F76ED8E00694D91 /* TradeScreenPresenter.swift in Sources */,
-				D1E3030B2F76EE5300694D91 /* SalesBot.swift in Sources */,
+				D1E3030B2F76EE5300694D91 /* TradingСurrencyBot.swift in Sources */,
 				D1E302D82F76ECB000694D91 /* AppDelegate.swift in Sources */,
 				D1E302D92F76ECB000694D91 /* SceneDelegate.swift in Sources */,
 				D1E302F32F76ED6D00694D91 /* ThemeSpacing.swift in Sources */,
 				D1E303032F76EE1000694D91 /* Portfolio.swift in Sources */,
+				D1E303352F7ACDAC00694D91 /* TradeScreenAssembly.swift in Sources */,
 				D1E302FF2F76EDEB00694D91 /* TradeScreenTableViewDataSource.swift in Sources */,
 				D1E302EF2F76ED5000694D91 /* ThemeFont.swift in Sources */,
 				D1E302ED2F76ED4400694D91 /* Theme.swift in Sources */,
 				D1E303012F76EDFC00694D91 /* TradeScreenTableViewCell.swift in Sources */,
-				D1E303052F76EE1D00694D91 /* TradeAction.swift in Sources */,
+				D1E303372F7ACE7A00694D91 /* TradeSimulationUseCase.swift in Sources */,
+				D1E303052F76EE1D00694D91 /* TradeStrategyExchangeCurrency.swift in Sources */,
 				D1E302EB2F76ED2D00694D91 /* ScrollView.swift in Sources */,
-				D1E302E92F76ED0E00694D91 /* Button.swift in Sources */,
-				D1E302FD2F76EDD700694D91 /* TradeScreenTableViewDelegate.swift in Sources */,
+				D1E302E92F76ED0E00694D91 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
