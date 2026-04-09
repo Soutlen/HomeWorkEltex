@@ -1,0 +1,55 @@
+//
+//  CurrencyPairModel.swift
+//  LHomeWork-7
+//
+//  Created by Евгений Глоба on 4/5/26.
+//
+
+import Foundation
+
+struct CurrencyModel: Equatable {
+    let currency: String
+    let type: CurrencyType
+}
+
+enum CurrencyType {
+    case fiat
+    case crypto
+}
+
+struct CurrencyPair {
+    let base: CurrencyModel
+    let counter: CurrencyModel
+}
+
+enum CurrencyPairSlot {
+    case base
+    case counter
+}
+
+final class CurrencyPairModelGenerator {
+    private static let letters = Array("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+
+    private static func randomCurrency() -> String {
+        let length = Int.random(in: 3...5)
+        let code = (0..<length)
+            .map { _ in letters.randomElement()! }
+            .map { String($0) }
+            .joined()
+        return code
+    }
+
+    static func generateCurrencies(count: Int) -> [CurrencyModel] {
+        var seen = Set<String>()
+        var result: [CurrencyModel] = []
+
+        while result.count < count {
+            let code = randomCurrency()
+            if seen.insert(code).inserted {
+                let type: CurrencyType = Bool.random() ? .fiat : .crypto
+                result.append(CurrencyModel(currency: code, type: type))
+            }
+        }
+        return result
+    }
+}
