@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D17C65772F7187F700ED17C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D17C656E2F7187F700ED17C6 /* Assets.xcassets */; };
+		D17C657B2F7187F700ED17C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C656D2F7187F700ED17C6 /* AppDelegate.swift */; };
+		D17C657C2F7187F700ED17C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C65742F7187F700ED17C6 /* SceneDelegate.swift */; };
+		D17C65822F71883C00ED17C6 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C65812F71883C00ED17C6 /* Button.swift */; };
+		D17C65842F71885900ED17C6 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C65832F71885900ED17C6 /* ScrollView.swift */; };
+		D17C65882F71887100ED17C6 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C65872F71887100ED17C6 /* Theme.swift */; };
+		D17C658A2F71888800ED17C6 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C65892F71888800ED17C6 /* ThemeFont.swift */; };
+		D17C658C2F71889900ED17C6 /* ThemeSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C658B2F71889900ED17C6 /* ThemeSize.swift */; };
+		D17C658E2F7188A800ED17C6 /* ThemeSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C658D2F7188A800ED17C6 /* ThemeSpacing.swift */; };
+		D17C65902F7188BA00ED17C6 /* ThemePalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C658F2F7188BA00ED17C6 /* ThemePalette.swift */; };
+		D17C65932F7188E000ED17C6 /* TradeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C65922F7188E000ED17C6 /* TradeScreenView.swift */; };
+		D17C65952F7188FF00ED17C6 /* TradeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C65942F7188FF00ED17C6 /* TradeScreenPresenter.swift */; };
+		D17C65972F71891500ED17C6 /* TradeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C65962F71891500ED17C6 /* TradeScreenViewController.swift */; };
+		D17C659A2F71894400ED17C6 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C65992F71894400ED17C6 /* Portfolio.swift */; };
+		D17C659C2F71895300ED17C6 /* TradeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C659B2F71895300ED17C6 /* TradeAction.swift */; };
+		D17C659E2F71896900ED17C6 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C659D2F71896900ED17C6 /* Exchange.swift */; };
+		D17C65A02F7189DA00ED17C6 /* PriceGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C659F2F7189DA00ED17C6 /* PriceGenerator.swift */; };
+		D17C65A22F7189EE00ED17C6 /* SalesBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C65A12F7189ED00ED17C6 /* SalesBot.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D17C65552F7187BD00ED17C6 /* LHomeWork-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LHomeWork-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D17C656D2F7187F700ED17C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D17C656E2F7187F700ED17C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D17C656F2F7187F700ED17C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D17C65742F7187F700ED17C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D17C65812F71883C00ED17C6 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		D17C65832F71885900ED17C6 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		D17C65872F71887100ED17C6 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D17C65892F71888800ED17C6 /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
+		D17C658B2F71889900ED17C6 /* ThemeSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSize.swift; sourceTree = "<group>"; };
+		D17C658D2F7188A800ED17C6 /* ThemeSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSpacing.swift; sourceTree = "<group>"; };
+		D17C658F2F7188BA00ED17C6 /* ThemePalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePalette.swift; sourceTree = "<group>"; };
+		D17C65922F7188E000ED17C6 /* TradeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeScreenView.swift; sourceTree = "<group>"; };
+		D17C65942F7188FF00ED17C6 /* TradeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeScreenPresenter.swift; sourceTree = "<group>"; };
+		D17C65962F71891500ED17C6 /* TradeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeScreenViewController.swift; sourceTree = "<group>"; };
+		D17C65992F71894400ED17C6 /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
+		D17C659B2F71895300ED17C6 /* TradeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeAction.swift; sourceTree = "<group>"; };
+		D17C659D2F71896900ED17C6 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
+		D17C659F2F7189DA00ED17C6 /* PriceGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceGenerator.swift; sourceTree = "<group>"; };
+		D17C65A12F7189ED00ED17C6 /* SalesBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesBot.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D17C65522F7187BD00ED17C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D17C654C2F7187BD00ED17C6 = {
+			isa = PBXGroup;
+			children = (
+				D17C65762F7187F700ED17C6 /* LHomeWork-5 */,
+				D17C65562F7187BD00ED17C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D17C65562F7187BD00ED17C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D17C65552F7187BD00ED17C6 /* LHomeWork-5.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D17C65762F7187F700ED17C6 /* LHomeWork-5 */ = {
+			isa = PBXGroup;
+			children = (
+				D17C656D2F7187F700ED17C6 /* AppDelegate.swift */,
+				D17C65742F7187F700ED17C6 /* SceneDelegate.swift */,
+				D17C657E2F71882000ED17C6 /* UI */,
+				D17C65912F7188CF00ED17C6 /* TradeScreen */,
+				D17C65982F71892900ED17C6 /* SimulationBot */,
+				D17C656E2F7187F700ED17C6 /* Assets.xcassets */,
+				D17C656F2F7187F700ED17C6 /* Info.plist */,
+			);
+			path = "LHomeWork-5";
+			sourceTree = "<group>";
+		};
+		D17C657E2F71882000ED17C6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D17C65802F71883200ED17C6 /* Theme */,
+				D17C657F2F71882B00ED17C6 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D17C657F2F71882B00ED17C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D17C65812F71883C00ED17C6 /* Button.swift */,
+				D17C65832F71885900ED17C6 /* ScrollView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D17C65802F71883200ED17C6 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				D17C65872F71887100ED17C6 /* Theme.swift */,
+				D17C65892F71888800ED17C6 /* ThemeFont.swift */,
+				D17C658B2F71889900ED17C6 /* ThemeSize.swift */,
+				D17C658D2F7188A800ED17C6 /* ThemeSpacing.swift */,
+				D17C658F2F7188BA00ED17C6 /* ThemePalette.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		D17C65912F7188CF00ED17C6 /* TradeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D17C65922F7188E000ED17C6 /* TradeScreenView.swift */,
+				D17C65942F7188FF00ED17C6 /* TradeScreenPresenter.swift */,
+				D17C65962F71891500ED17C6 /* TradeScreenViewController.swift */,
+			);
+			path = TradeScreen;
+			sourceTree = "<group>";
+		};
+		D17C65982F71892900ED17C6 /* SimulationBot */ = {
+			isa = PBXGroup;
+			children = (
+				D17C65992F71894400ED17C6 /* Portfolio.swift */,
+				D17C659B2F71895300ED17C6 /* TradeAction.swift */,
+				D17C659D2F71896900ED17C6 /* Exchange.swift */,
+				D17C659F2F7189DA00ED17C6 /* PriceGenerator.swift */,
+				D17C65A12F7189ED00ED17C6 /* SalesBot.swift */,
+			);
+			path = SimulationBot;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D17C65542F7187BD00ED17C6 /* LHomeWork-5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D17C65682F7187BF00ED17C6 /* Build configuration list for PBXNativeTarget "LHomeWork-5" */;
+			buildPhases = (
+				D17C65512F7187BD00ED17C6 /* Sources */,
+				D17C65522F7187BD00ED17C6 /* Frameworks */,
+				D17C65532F7187BD00ED17C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LHomeWork-5";
+			packageProductDependencies = (
+			);
+			productName = "LHomeWork-5";
+			productReference = D17C65552F7187BD00ED17C6 /* LHomeWork-5.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D17C654D2F7187BD00ED17C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					D17C65542F7187BD00ED17C6 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+				};
+			};
+			buildConfigurationList = D17C65502F7187BD00ED17C6 /* Build configuration list for PBXProject "LHomeWork-5" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D17C654C2F7187BD00ED17C6;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D17C65562F7187BD00ED17C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D17C65542F7187BD00ED17C6 /* LHomeWork-5 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D17C65532F7187BD00ED17C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D17C65772F7187F700ED17C6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D17C65512F7187BD00ED17C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D17C658C2F71889900ED17C6 /* ThemeSize.swift in Sources */,
+				D17C65902F7188BA00ED17C6 /* ThemePalette.swift in Sources */,
+				D17C659C2F71895300ED17C6 /* TradeAction.swift in Sources */,
+				D17C65932F7188E000ED17C6 /* TradeScreenView.swift in Sources */,
+				D17C65A22F7189EE00ED17C6 /* SalesBot.swift in Sources */,
+				D17C657B2F7187F700ED17C6 /* AppDelegate.swift in Sources */,
+				D17C657C2F7187F700ED17C6 /* SceneDelegate.swift in Sources */,
+				D17C658E2F7188A800ED17C6 /* ThemeSpacing.swift in Sources */,
+				D17C658A2F71888800ED17C6 /* ThemeFont.swift in Sources */,
+				D17C65882F71887100ED17C6 /* Theme.swift in Sources */,
+				D17C65952F7188FF00ED17C6 /* TradeScreenPresenter.swift in Sources */,
+				D17C659A2F71894400ED17C6 /* Portfolio.swift in Sources */,
+				D17C659E2F71896900ED17C6 /* Exchange.swift in Sources */,
+				D17C65972F71891500ED17C6 /* TradeScreenViewController.swift in Sources */,
+				D17C65842F71885900ED17C6 /* ScrollView.swift in Sources */,
+				D17C65822F71883C00ED17C6 /* Button.swift in Sources */,
+				D17C65A02F7189DA00ED17C6 /* PriceGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D17C65692F7187BF00ED17C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 288MPMTRK5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LHomeWork-5/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-15.11.LHomeWork-5";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D17C656A2F7187BF00ED17C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 288MPMTRK5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LHomeWork-5/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-15.11.LHomeWork-5";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D17C656B2F7187BF00ED17C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 288MPMTRK5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D17C656C2F7187BF00ED17C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 288MPMTRK5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D17C65502F7187BD00ED17C6 /* Build configuration list for PBXProject "LHomeWork-5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D17C656B2F7187BF00ED17C6 /* Debug */,
+				D17C656C2F7187BF00ED17C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D17C65682F7187BF00ED17C6 /* Build configuration list for PBXNativeTarget "LHomeWork-5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D17C65692F7187BF00ED17C6 /* Debug */,
+				D17C656A2F7187BF00ED17C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D17C654D2F7187BD00ED17C6 /* Project object */;
+}
